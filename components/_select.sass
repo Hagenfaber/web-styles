@@ -1,0 +1,61 @@
+.custom-input
+
+
+    &.w-30
+        width: 30%
+    width: 100%
+    color: $neutral-950
+    .mb-md
+        margin-bottom: $global-whitespace-md
+        
+    &.primary
+        input
+            &:active, &:focus
+                border-color:  $primary
+                outline-color: $primary-o
+                
+
+    display: flex
+    flex-direction: column
+
+    &.row
+        flex-direction: row
+
+    .custom-select
+
+        display: block
+        position: relative
+
+        .symbol
+            height: 16px
+            width: 16px
+            fill: $neutral-950
+            position: absolute
+
+            top: 0
+            bottom: 0
+            right: 10px
+            margin: auto 0
+
+
+        select
+            appearance: none
+            box-sizing: border-box
+            width: 100%
+            height: fit-content
+            border: $neutral-300 solid $global-border-width-sm  
+            border-radius: $global-border-radius-sm
+            padding: $global-whitespace-xs
+
+            background-color: $neutral-200
+
+
+            &:hover
+                border-color: $neutral-50
+
+
+            &:active, &:focus
+                outline-width: $global-border-width-lg
+                outline-style: solid
+                border-color:  $primary
+                outline-color: $primary-o

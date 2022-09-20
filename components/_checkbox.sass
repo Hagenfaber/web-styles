@@ -1,0 +1,49 @@
+.custom-checkbox
+    input
+        @include hide-accessible
+
+        &:checked + .custom-option
+            .symbol
+                transition: $global-transition-speed ease opacity
+                opacity: 1
+
+        &:focus + .custom-option, &:active + .custom-option
+            .fake-input
+                outline-width: $global-border-width-lg
+                outline-style: solid
+                border-color:  $primary
+                outline-color: $primary-o
+            
+
+
+.custom-option
+    user-select: none
+    display: flex
+    align-items: center
+
+    .fake-input
+        display: flex
+        justify-content: center
+        align-items: center
+        height: 16px
+        width: 16px
+        min-height: 16px
+        min-width: 16px
+        border: $global-border-width-sm solid
+        margin: 8px
+        margin-left: 0
+        border-radius: $global-border-radius-sm
+
+        &:hover
+            border-color: $neutral-50
+
+
+
+        .symbol
+            fill: $primary
+            height: 10px
+            width: 10px
+            min-height: 10px
+            min-width: 10px
+            transition: $global-transition-speed ease opacity
+            opacity: 0

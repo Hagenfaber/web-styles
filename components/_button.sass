@@ -1,0 +1,43 @@
+.button
+    background-color: $neutral-400
+    color: $neutral-950 !important
+    width: 100%
+    box-sizing: border-box
+    border: none
+    padding: $global-whitespace-sm
+    border-radius: $global-border-radius-md
+    min-width: $global-baseline
+    display: flex
+    justify-content: center
+    align-items: center
+
+    user-select: none
+    transition: $global-transition-speed ease background-color  
+
+    &.sm
+        padding: 0
+
+
+    &:hover
+        transition: $global-transition-speed ease background-color
+        background-color: $neutral-300     
+
+    &:focus
+        border: none
+        outline-width: $global-border-width-md
+        outline-style: solid
+        outline-offset: 2px
+        outline-color: $neutral-400
+
+    &.primary
+        background-color: $primary
+        color: $neutral-950
+        &:hover
+            background-color: $primary-d
+
+        &:focus
+        outline-color: $primary-d
+
+    svg
+        width: 16px
+        height: 16px
